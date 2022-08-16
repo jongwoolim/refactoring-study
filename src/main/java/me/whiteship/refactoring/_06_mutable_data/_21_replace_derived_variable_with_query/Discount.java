@@ -2,7 +2,7 @@ package me.whiteship.refactoring._06_mutable_data._21_replace_derived_variable_w
 
 public class Discount {
 
-    private double discountedTotal;
+//    private double discountedTotal;
     private double discount;
 
     private double baseTotal;
@@ -12,11 +12,12 @@ public class Discount {
     }
 
     public double getDiscountedTotal() {
-        return this.discountedTotal;
+        return this.baseTotal - this.discount;
+//        return this.discountedTotal;
     }
 
     public void setDiscount(double number) {
         this.discount = number;
-        this.discountedTotal = this.baseTotal - this.discount;
+//        this.discountedTotal = this.baseTotal - this.discount;
     }
 }
